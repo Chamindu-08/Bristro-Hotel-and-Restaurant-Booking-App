@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginTop="8dp"
-                    android:backgroundTint="@color/green"
+                    android:backgroundTint="@color/main_color"
                     android:text="Reserve" />
             </LinearLayout>
         </LinearLayout>
