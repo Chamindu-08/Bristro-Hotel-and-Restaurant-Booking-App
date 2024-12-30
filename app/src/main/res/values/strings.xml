@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">BristroHotelandRestaurantBookingApp</string>
+    <string name="bistro_logo">Bistro Hotel Logo</string>
+    <string name="menu_icon">Menu Icon</string>
+    <string name="shopping_cart_icon">Shopping Cart Icon</string>
+    <string name="restaurant_image"> restaurant image</string>
+    <string name="location_icon"> location icon</string>
+    <string name="hotel_image_desc"> location icon</string>
+
+
+
+
 </resources>

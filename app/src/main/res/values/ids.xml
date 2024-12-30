@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="hotelImage" type="id" />
+    <item name="hotelName" type="id" />
+    <item name="hotelDescription" type="id" />
+    <item name="reserveButton" type="id" />
+</resources>
