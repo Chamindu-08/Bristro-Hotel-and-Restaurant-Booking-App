@@ -1,10 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RestaurantMealOrderActivity">
+    android:background="@color/white"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Top Bar -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/img"
+            android:contentDescription="Back Button" />
+
+    </LinearLayout>
+
+    <!-- Restaurant Details -->
+    <ImageView
+        android:id="@+id/restaurant_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_1" />
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_below="@id/restaurant_image"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="An BBQ Dong Khoi"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/restaurant_details"
+        android:layout_below="@id/restaurant_name"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now Open... Closes at 10:00PM"
+        android:textColor="@color/main_color"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <!-- Tabs -->
+    <LinearLayout
+        android:id="@+id/tabs"
+        android:layout_below="@id/restaurant_details"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reservation"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Menu"
+             />
+    </LinearLayout>
+
+    <!-- Menu Items -->
+    <ScrollView
+        android:id="@+id/menu_list"
+        android:layout_below="@id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Item Template -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+               >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_3" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USDA Beef Ribs Finger"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Honey Sauce"
+                        android:textSize="14sp"
+                        android:textColor="@color/main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="389.000 VND"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:backgroundTint="@color/main_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:text="2"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:text="+"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/main_color"
+                        android:textColor="@android:color/black" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Additional items repeat here -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/place_order_button"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PLACE ORDER"
+        android:background="@color/main_color"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="16dp" />
+
+</RelativeLayout>

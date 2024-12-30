@@ -5,6 +5,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.view.View;
+
 
 class RestaurantBookingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
