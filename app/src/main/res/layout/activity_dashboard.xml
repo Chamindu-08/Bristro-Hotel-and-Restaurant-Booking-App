@@ -41,6 +41,11 @@
         app:layout_constraintVertical_bias="0.056" />
 
     <!-- RecyclerView for Restaurants -->
+
+    <!-- See All Restaurants Text -->
+
+    <!-- Shopping Cart Icon -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_restaurants"
         android:layout_width="match_parent"
@@ -52,11 +57,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_restaurants"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <!-- See All Restaurants Text -->
-
-    <!-- Shopping Cart Icon -->
+        app:layout_constraintVertical_bias="0.002" />
 
     <TextView
         android:id="@+id/tv_see_all"

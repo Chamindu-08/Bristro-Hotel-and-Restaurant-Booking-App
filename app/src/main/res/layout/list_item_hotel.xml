@@ -16,15 +16,32 @@
         android:scaleType="centerCrop"
         android:contentDescription="Hotel Image" />
 
-    <!-- Hotel Name -->
-    <TextView
-        android:id="@+id/hotelName"
-        android:layout_width="wrap_content"
+    <!-- Hotel Name and Reserve Button in a Horizontal Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#000"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="8dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!-- Hotel Name -->
+        <TextView
+            android:id="@+id/hotelName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="sans-serif-medium"
+            android:text="Hotel Name" />
+
+        <!-- Reserve Button -->
+        <Button
+            android:id="@+id/reserveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reserve"
+            android:backgroundTint="#63918b"/>
+    </LinearLayout>
 
     <!-- Hotel Description -->
     <TextView
@@ -33,13 +50,6 @@
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:textColor="#666"
-        android:layout_marginTop="4dp" />
-
-    <!-- Reserve Button -->
-    <Button
-        android:id="@+id/reserveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reserve"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="4dp"
+        android:text="Hotel Description" />
 </LinearLayout>
