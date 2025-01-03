@@ -222,8 +222,13 @@
         </LinearLayout>
 
         <Button
-            style="@style/AppButtonStyle"
             android:id="@+id/buttonCancelReservation"
-            android:text="Cancel Reservation" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel Reservation"
+            android:backgroundTint="@color/main_color"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
     </LinearLayout>
 </ScrollView>
