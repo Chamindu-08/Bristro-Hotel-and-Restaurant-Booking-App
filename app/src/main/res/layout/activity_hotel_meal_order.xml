@@ -1,10 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HotelMealOrderActivity">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Image section with text overlay -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/myImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_image" />
+
+        <!-- Back Icon with circular semi-white background in the top left corner -->
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|top"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back Button"
+            android:background="@drawable/circular_white_background"/>
+
+        <!-- Text fields at the bottom of the image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:background="#40FFFFFF"
+            android:padding="8dp">
+
+            <!-- Hotel Name -->
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hotel Name"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:gravity="start" />
+
+            <!-- Hotel Address -->
+            <TextView
+                android:id="@+id/hotelAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hotel Address"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:gravity="start" />
+
+            <!-- Hotel Open Time -->
+            <TextView
+                android:id="@+id/hotelOpenTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Time: 9:00 AM - 10:00 PM"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:gravity="start" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Reservation and Menu Button on the same line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Reservation Text -->
+        <TextView
+            android:id="@+id/reservationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="200dp"
+            android:text="Reservation"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start" />
+
+        <!-- Menu Button -->
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#e3e0d9"
+            android:text="Menu"
+            android:textColor="#63918b"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- RecyclerView for Food Items -->
+
+    <!-- Placeholder View for the remaining 2/3 of the screen -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foodRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="2"
+        android:padding="8dp" />
+
+    <!-- PLACE ORDER Button at the bottom -->
+
+
+    <Button
+        android:id="@+id/placeOrderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#63918b"
+        android:padding="16dp"
+        android:text="PLACE ORDER"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+</LinearLayout>
