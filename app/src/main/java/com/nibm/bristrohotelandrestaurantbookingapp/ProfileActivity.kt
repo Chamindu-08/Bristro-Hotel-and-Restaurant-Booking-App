@@ -1,4 +1,4 @@
-package com.example.bristroapp
+package com.nibm.bristrohotelandrestaurantbookingapp
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.nibm.bristrohotelandrestaurantbookingapp.R
 
 
-class ViewProfileActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

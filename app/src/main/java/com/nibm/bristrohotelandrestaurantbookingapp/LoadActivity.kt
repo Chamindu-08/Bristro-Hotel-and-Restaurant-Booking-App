@@ -1,24 +1,22 @@
 package com.nibm.bristrohotelandrestaurantbookingapp
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import androidx.activity.enableEdgeToEdge
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class LoadActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge() // Optional: Only needed if you are working with edge-to-edge layouts
         setContentView(R.layout.activity_load)
 
-        // Apply padding to handle system bars dynamically
-        val mainView = findViewById<View>(R.id.main) // Root layout ID
-        ViewCompat.setOnApplyWindowInsetsListener(mainView) { view, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        // Delay for 2 seconds and then start SignInActivity
+        Handler().postDelayed({
+            // Create an intent to start SignInActivity
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)  // Start the SignInActivity
+            finish()  // Close LoadActivity so user can't go back to it
+        }, 2000)  // Delay of 2 seconds
     }
 }

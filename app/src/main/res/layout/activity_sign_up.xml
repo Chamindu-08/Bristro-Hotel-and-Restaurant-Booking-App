@@ -32,6 +32,7 @@
 
 
     <EditText
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
@@ -42,6 +43,7 @@
 
 
     <EditText
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
@@ -53,6 +55,7 @@
 
 
     <EditText
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
@@ -64,6 +67,7 @@
 
 
     <EditText
+        android:id="@+id/editTextConfirmPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
@@ -74,6 +78,7 @@
         android:layout_marginBottom="20dp" />
 
     <Button
+        android:id="@+id/buttonSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign Up"
@@ -82,10 +87,23 @@
         android:layout_marginBottom="20dp" />
 
     <TextView
-        android:id="@+id/signInText"
+        android:id="@+id/textViewRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already you have an account sign in here!"
-        android:textColor="#0000FF"
-        android:layout_gravity="center" />
+        android:text="already you have an account?"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/textViewSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in here!"
+        android:textSize="14sp"
+        android:textColor="@color/link_color"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"/>
 </LinearLayout>
