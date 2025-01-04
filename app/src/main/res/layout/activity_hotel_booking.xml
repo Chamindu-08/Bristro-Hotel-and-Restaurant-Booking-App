@@ -1,10 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HotelBookingActivity">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Image section with text overlay -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/myImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_image" />
+
+        <!-- Back Icon with circular semi-white background in the top left corner -->
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|top"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back Button"
+            android:background="@drawable/circular_white_background" />
+
+        <!-- Text fields at the bottom of the image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:background="#40FFFFFF"
+            android:padding="8dp">
+
+            <!-- Hotel Name -->
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hotel Name"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:gravity="start" />
+
+            <!-- Hotel Address -->
+            <TextView
+                android:id="@+id/hotelAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hotel Address"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:gravity="start" />
+
+            <!-- Hotel Open Time -->
+            <TextView
+                android:id="@+id/hotelOpenTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Time: 9:00 AM - 10:00 PM"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:gravity="start" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Reservation and Menu Button on the same line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Menu Button -->
+        <Button
+            android:id="@+id/reservationText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="75dp"
+            android:layout_weight="1"
+            android:backgroundTint="#e3e0d9"
+            android:text="Reservation"
+            android:textColor="#63918b"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/menuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Menu"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- "Pick your date" Text -->
+
+    <!-- Date Picker Field -->
+    <TextView
+        android:id="@+id/pickDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:paddingLeft="10dp"
+        android:text="Pick your date"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/datePickerEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_edit_text"
+        android:hint="Select Date"
+        android:inputType="none"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- "Pick your time" Text -->
+    <TextView
+        android:id="@+id/pickTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="Pick your time"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp" />
+
+    <!-- Time Picker Field -->
+    <EditText
+        android:id="@+id/timePickerEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_edit_text"
+        android:hint="Select Time"
+        android:inputType="none"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- How Many Rooms and How Many People Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <!-- How Many Rooms Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/howManyRoomsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="How Many Rooms"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp" />
+
+            <!-- Room Counter Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <!-- Decrease Button -->
+                <Button
+                    android:id="@+id/decreaseRoomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#e3e0d9"
+                    android:textColor="#000000" />
+
+                <!-- Room Count Text -->
+                <TextView
+                    android:id="@+id/roomCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_edit_text" />
+
+                <!-- Increase Button -->
+                <Button
+                    android:id="@+id/increaseRoomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="#e3e0d9"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- How Many People Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/howManyPeopleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="How Many People"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp" />
+
+            <!-- People Counter Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="8dp">
+
+                <!-- Decrease Button -->
+                <Button
+                    android:id="@+id/decreasePeopleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#e3e0d9"
+                    android:textColor="#000000" />
+
+                <!-- People Count Text -->
+                <TextView
+                    android:id="@+id/peopleCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_edit_text" />
+
+                <!-- Increase Button -->
+                <Button
+                    android:id="@+id/increasePeopleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="#e3e0d9"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Notes Section -->
+    <TextView
+        android:id="@+id/notesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="Notes"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp" />
+
+    <!-- Notes TextArea (EditText for multi-line input) -->
+    <EditText
+        android:id="@+id/notesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_edit_text"
+        android:hint="Enter notes here"
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:gravity="top" />
+
+    <!-- Terms of Service Checkbox Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:padding="8dp">
+
+        <!-- Checkbox for agreeing to terms of service -->
+        <CheckBox
+            android:id="@+id/termsCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to the terms of service"
+            android:textSize="14sp"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#63918b"
+        android:text="Reserve"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+</LinearLayout>

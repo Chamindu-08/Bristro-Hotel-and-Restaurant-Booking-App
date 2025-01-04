@@ -38,8 +38,6 @@ android {
 dependencies {
 
     implementation ("com.github.bumptech.glide:glide:4.15.1")
-    implementation(libs.firebase.database.ktx)
-    implementation(libs.firebase.firestore.ktx)
     annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
 
     implementation(libs.androidx.core.ktx)

@@ -29,7 +29,7 @@
             android:layout_margin="16dp"
             android:src="@drawable/ic_arrow_back"
             android:contentDescription="Back Button"
-            android:background="@drawable/circular_white_background"/>
+            android:background="@drawable/circular_white_background" />
 
         <!-- Text fields at the bottom of the image -->
         <LinearLayout
@@ -106,28 +106,24 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- RecyclerView for Food Items -->
-
-    <!-- Placeholder View for the remaining 2/3 of the screen -->
-
+    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/foodRecyclerView"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         android:layout_weight="2"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:clipToPadding="false" />
 
-    <!-- PLACE ORDER Button at the bottom -->
-
-
+    <!-- Place Order Button -->
     <Button
         android:id="@+id/placeOrderButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#63918b"
-        android:padding="16dp"
         android:text="PLACE ORDER"
         android:textColor="#FFFFFF"
-        android:textSize="22sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#63918b"
+        android:padding="12dp" />
 </LinearLayout>
