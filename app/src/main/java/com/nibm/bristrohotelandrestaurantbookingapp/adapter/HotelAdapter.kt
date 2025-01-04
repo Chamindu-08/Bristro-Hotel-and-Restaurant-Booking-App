@@ -1,9 +1,12 @@
+package com.nibm.bristrohotelandrestaurantbookingapp.adapter
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.annotation.DrawableRes
+import com.nibm.bristrohotelandrestaurantbookingapp.R
+import com.nibm.bristrohotelandrestaurantbookingapp.models.Hotel
 
 class HotelAdapter(private val context: Context, private val hotels: List<Hotel>) : BaseAdapter() {
 
