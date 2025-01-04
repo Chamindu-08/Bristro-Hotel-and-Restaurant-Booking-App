@@ -33,6 +33,7 @@
         android:layout_marginBottom="20dp" />
 
     <EditText
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
@@ -42,6 +43,7 @@
         android:layout_marginBottom="10dp" />
 
     <EditText
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
@@ -51,6 +53,7 @@
         android:layout_marginBottom="20dp" />
 
     <Button
+        android:id="@+id/buttonSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign In"
@@ -59,10 +62,24 @@
         android:layout_marginBottom="20dp" />
 
     <TextView
-        android:id="@+id/registerText"
+        android:id="@+id/textViewRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="if you don’t an account you can -  Register here!"
-        android:textColor="#0000FF"
-        android:layout_gravity="center" />
+        android:text="if you don’t an account you can"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/textViewRegisterHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register here!"
+        android:textSize="14sp"
+        android:textColor="@color/link_color"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:focusable="true" />
 </LinearLayout>

@@ -48,7 +48,8 @@
             android:exported="false" />
         <activity
             android:name=".AllHotelsActivity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".DashboardActivity"
             android:exported="false" />
