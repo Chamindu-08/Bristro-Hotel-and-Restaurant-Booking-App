@@ -1,74 +1,60 @@
 package com.nibm.bristrohotelandrestaurantbookingapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.TextView
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-
 class ProfileActivity : AppCompatActivity() {
 
+    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        val backButton: ImageView = findViewById(R.id.backButton)
-        val editProfileButton: TextView = findViewById(R.id.editProfileButton)
+        val back = findViewById<ImageView>(R.id.backButton)
+        val edit = findViewById<ImageView>(R.id.editProfileButton)
+        val home = findViewById<LinearLayout>(R.id.homeLayout)
+        val reservation = findViewById<LinearLayout>(R.id.reservationLayout)
+        val order = findViewById<LinearLayout>(R.id.ordersLayout)
+        val changePassword = findViewById<LinearLayout>(R.id.changePasswordLayout)
+        val logout = findViewById<LinearLayout>(R.id.logoutLayout)
 
-        val homeOption: TextView = findViewById(R.id.homeOption)
-        val reservationOption: TextView = findViewById(R.id.reservationOption)
-        val ordersOption: TextView = findViewById(R.id.ordersOption)
-        val changePasswordOption: TextView = findViewById(R.id.changePasswordOption)
-        val privacyPoliciesOption: TextView = findViewById(R.id.privacyPoliciesOption)
-        val aboutAppOption: TextView = findViewById(R.id.aboutAppOption)
-        val helpOption: TextView = findViewById(R.id.helpOption)
-        val logoutOption: TextView = findViewById(R.id.logoutOption)
-
-        backButton.setOnClickListener {
+        back.setOnClickListener {
             finish()
         }
 
-        editProfileButton.setOnClickListener {
-
+        edit.setOnClickListener {
             val intent = Intent(this, EditProfileActivity::class.java)
             startActivity(intent)
         }
 
-        homeOption.setOnClickListener {
-            Toast.makeText(this, "Navigating to Home", Toast.LENGTH_SHORT).show()
-
+        home.setOnClickListener {
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
         }
 
-        reservationOption.setOnClickListener {
-            Toast.makeText(this, "Navigating to Reservations", Toast.LENGTH_SHORT).show()
-
+        reservation.setOnClickListener {
+            val intent = Intent(this, AllReservationActivity::class.java)
+            startActivity(intent)
         }
 
-        ordersOption.setOnClickListener {
-            Toast.makeText(this, "Navigating to Orders", Toast.LENGTH_SHORT).show()
+        order.setOnClickListener {
+            val intent = Intent(this, AllOdersActivity::class.java)
+            startActivity(intent)
         }
 
-        changePasswordOption.setOnClickListener {
-            Toast.makeText(this, "Navigating to Change Password", Toast.LENGTH_SHORT).show()
+        changePassword.setOnClickListener {
+            val intent = Intent(this, EditProfileActivity::class.java)
+            startActivity(intent)
         }
 
-
-        privacyPoliciesOption.setOnClickListener {
-            Toast.makeText(this, "Viewing Privacy & Policies", Toast.LENGTH_SHORT).show()
-        }
-
-        aboutAppOption.setOnClickListener {
-            Toast.makeText(this, "Viewing About App", Toast.LENGTH_SHORT).show()
-        }
-
-        helpOption.setOnClickListener {
-            Toast.makeText(this, "Navigating to Help", Toast.LENGTH_SHORT).show()
-        }
-
-        logoutOption.setOnClickListener {
-            Toast.makeText(this, "Logging Out", Toast.LENGTH_SHORT).show()
+        logout.setOnClickListener {
+            Toast.makeText(this, "Logging out...", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SignInActivity::class.java)
         }
     }
 }
