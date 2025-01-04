@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "381352864490",
+    "project_id": "bistro-app-7f687",
+    "storage_bucket": "bistro-app-7f687.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381352864490:android:fc3cb89b64785940d4c593",
+        "android_client_info": {
+          "package_name": "com.nibm.bristro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRYFl8-tRnzvqoUqacIJ6bR27kxJ7V87w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
